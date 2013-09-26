@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+
+  "name": "Twitter Translate",
+  "description": "This extension adds translate button clicking on whicn translates twitter tweets to english.",
+  "version": "1.0",
+
+  "content_scripts": [
+    {
+      "matches": ["http://twitter.com/*","https://twitter.com/*"],
+      "js": ["jquery-2.0.3.min.js","main.js"]
+    }
+  ],
+  "content_security_policy": "script-src 'self' https://api.microsofttranslator.com; object-src 'self'",
+  "permissions": [
+    "https://api.microsofttranslator.com/*"
+  ]
+}
